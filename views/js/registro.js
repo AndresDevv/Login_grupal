@@ -57,7 +57,7 @@ form.addEventListener('submit', async (event) => {
     message.style.color = '#566481';
 
     try {
-        const response = await fetch('../../controllers/registro.php', {
+        const response = await fetch('../controllers/registro.php', {
             method: 'POST',
             body: formData,
             headers: {
@@ -71,7 +71,8 @@ form.addEventListener('submit', async (event) => {
             message.textContent = data.message;
             message.style.color = '#27ae60';
             setTimeout(() => {
-                window.location.href = data.redirect || '../../index.php';
+                const projectRoot = new URL('../', window.location.href);
+                window.location.href = new URL(data.redirect || 'dashboard.php', projectRoot).href;
             }, 1000);
         } else {
             message.textContent = data.message || 'Error en el registro.';
