@@ -18,12 +18,12 @@ recuperarForm.addEventListener('submit', async (event) => {
 
     const originalContent = submitButton.innerHTML;
     submitButton.disabled = true;
-    submitButton.innerHTML = '<span class="recuperar__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="3" fill="none" stroke-dasharray="30 30" style="animation: spin 1s linear infinite"/></svg></span><span class="recuperar__button-text">Enviando...</span>';
+    submitButton.textContent = 'Enviando...';
     recuperarMessage.hidden = true;
     recuperarMessage.textContent = '';
 
     try {
-        const response = await fetch('../../controllers/recuperar.php', {
+        const response = await fetch('../controllers/recuperar.php', {
             method: 'POST',
             body: formData,
             headers: {
@@ -55,7 +55,7 @@ recuperarForm.addEventListener('submit', async (event) => {
 
 const recuperarTermsToggle = document.getElementById('recuperar-terms-toggle');
 const recuperarTerms = document.getElementById('recuperar-terms');
-recuperarTermsToggle.addEventListener('click', () => {
+recuperarTermsToggle?.addEventListener('click', () => {
     const expanded = recuperarTermsToggle.getAttribute('aria-expanded') === 'true';
     recuperarTermsToggle.setAttribute('aria-expanded', String(!expanded));
     recuperarTerms.hidden = expanded;
