@@ -10,7 +10,9 @@
 <body class="login-page">
     <main class="login" aria-labelledby="login-title">
         <header class="login__header">
+            <span class="login__eyebrow">BIENVENIDO DE NUEVO</span>
             <h1 id="login-title">Iniciar sesión</h1>
+            <p>Ingresa tus datos para continuar.</p>
         </header>
         <form id="login-form" class="login__form" method="post" action="controllers/login.php">
             <div class="login__field">
