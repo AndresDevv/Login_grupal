@@ -8,7 +8,7 @@ php -S localhost:8085
 
 Visitar http://localhost:8085/views/registro.php.
 
-La vista sigue la referencia: cabecera azul, cinco campos, controles para mostrar las contraseñas y botones Ok / Cancel. Cancel limpia los campos. Ok muestra un aviso de vista previa; no guarda datos ni envía contraseñas.
+La vista sigue la referencia: cabecera azul, cinco campos, controles para mostrar las contraseñas y controles Ok / Cancel. Cancel vuelve al login mediante `../index.php`, incluso sin JavaScript y sin exigir completar los campos. Ok utiliza la conexión de registro definida en `js/registro.js`.
 
 Se conserva la estructura `controller`, `model`, `views` y el `index.php` original. Los estilos usan el prefijo `registro` para facilitar la integración con otras vistas.
 

@@ -66,7 +66,7 @@
 .registro__toggle svg { width: 25px; height: 25px; fill: none; stroke: currentColor; stroke-width: 2; }
 .registro__toggle[aria-pressed="true"] { background: #edf1fa; color: #3c609f; }
 .registro__actions { display: flex; gap: 38px; margin-top: 14px; }
-.registro__actions button {
+.registro__actions button, .registro__cancel {
     flex: 1;
     min-height: 46px;
     border: 0;
@@ -78,8 +78,10 @@
     cursor: pointer;
 }
 
-.registro__actions button:hover { background: #5275b5; }
-.registro button:focus-visible { outline: 3px solid #314f87; outline-offset: 3px; }
+.registro__cancel { display: flex; align-items: center; justify-content: center; text-decoration: none; }
+
+.registro__actions button:hover, .registro__cancel:hover { background: #5275b5; }
+.registro button:focus-visible, .registro__cancel:focus-visible { outline: 3px solid #314f87; outline-offset: 3px; }
 .registro__message { min-height: 20px; margin: 0; text-align: center; font-size: 14px; line-height: 1.4; }
 
 @media (max-width: 480px) {

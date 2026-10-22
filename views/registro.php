@@ -47,7 +47,7 @@
             <p id="registro-message" class="registro__message" role="status" aria-live="polite"></p>
             <div class="registro__actions">
                 <button type="submit">Ok</button>
-                <button type="reset">Cancel</button>
+                <a class="registro__cancel" href="../index.php">Cancel</a>
             </div>
         </form>
     </main>
